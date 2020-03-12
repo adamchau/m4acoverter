@@ -14,7 +14,7 @@ if [ -d $m4adir ]; then
     files=$(ls $m4adir)
     for filename in $files
     do
-    ffmpeg -y -i $m4adir/$filename -ar 16000 `echo "$destdir/$filename"|sed 's/.m4a/.wav/g'`
+    ffmpeg -y -i $m4adir/$filename -ar 16000 `echo "$destdir/$filename"|sed 's/.ogg/.wav/g'`
     echo "FILE: "$filename" converted successfully" > log.txt
     done
 else
